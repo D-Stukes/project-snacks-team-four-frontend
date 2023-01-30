@@ -13,12 +13,14 @@ import Error from "./Pages/Error";
 
 // COMPONENTS
 import Nav from "./Components/Nav";
+import HeaderBar from "./Components/HeaderBar";
 
 function App() {
 
   return (
     <div className="App">
       <Router>
+        <HeaderBar/>
         <Nav/>
         <main>
           <Routes>

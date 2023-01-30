@@ -48,7 +48,7 @@ function EditSnackForm() {
     updateSnack(snack, id);
   };
   return (
-    <div className="Edit">
+    <div className="editSnack">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input

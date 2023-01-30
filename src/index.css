@@ -1,0 +1,49 @@
+.nav{
+    background-color: gray;
+    background-image: url("./images/hd-wallpaper-gfba78f985_1280.jpg");
+    height: 100%;
+    width: 100%;
+}
+
+
+.home{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("./images/breakfast-g797c90361_1280.jpg");
+    background-size: cover ;
+}
+.index{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("./images/brooke-lark-wMzx2nBdeng-unsplash\ 2.jpg");
+    background-size: cover ;
+}
+
+
+.edit{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("./images/dose-juice-sTPy-oeA3h0-unsplash.jpg");
+    background-size: cover ;
+}
+
+.show{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("./images/ellie-ellien-E87UW-n4X1Q-unsplash.jpg");
+    background-size: cover ;
+}
+
+.new{
+    height: 100%;
+    width: 100%;
+    background-image: url("/assets/ellie-ellien-E87UW-n4X1Q-unsplash.jpg");
+    background-size: cover ;
+}
+
+.error{
+    height: 80vh;
+    width: 100vw;
+    background-image: url("./images/ai-generated-gad8540c7a_1280.png");
+    background-size: cover ;
+}

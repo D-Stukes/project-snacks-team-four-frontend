@@ -5,13 +5,13 @@ function Snack({ snack }) {
     <tr>
       <td>
         {snack.is_healthy ? (
-          <span>"heart image"</span>
+          <span>"♥"</span>
         ) : (
-          <span>&nbsp; &nbsp; &nbsp;</span>
+          <span>"♡"</span>
         )}
       </td>
       <td>
-        <a href={snack.url} target="_blank" >
+        <a href={snack.image} target="_blank" rel="noreferrer" >
           {snack.name}
         </a>
       </td>

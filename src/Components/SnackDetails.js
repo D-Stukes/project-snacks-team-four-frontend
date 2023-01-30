@@ -38,7 +38,7 @@ const handleDelete = () => {
   .catch((c) => {
     console.warn("catch", c);
   });
-  }, [id, API]);
+  }, [id]);
 
   return (
     <article>

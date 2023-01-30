@@ -2,7 +2,7 @@ import SnackDetails from "../Components/SnackDetails";
 
 function Show() {
   return (
-    <div className="Show">
+    <div className="show">
       <h2>Show</h2>
       <SnackDetails />
     </div>

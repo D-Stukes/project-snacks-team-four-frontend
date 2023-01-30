@@ -41,7 +41,7 @@ function NewSnackForm() {
     addSnack(snack);
   };
   return (
-    <div className="New">
+    <div className="newSnack">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
