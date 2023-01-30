@@ -1,5 +1,5 @@
 
-import NewSnacForm from "../Components/NewSnackForm";
+import NewSnackForm from "../Components/NewSnackForm";
 
 function New() {
   return (

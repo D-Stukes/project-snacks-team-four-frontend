@@ -1,4 +1,4 @@
-import EditLogForm from "../Components/EditSnackForm";
+import EditSnackForm from "../Components/EditSnackForm";
 
 function Edit() {
   return (

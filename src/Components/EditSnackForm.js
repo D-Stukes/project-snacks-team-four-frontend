@@ -7,7 +7,7 @@ function EditSnackForm() {
   let { id } = useParams();
   let navigate = useNavigate();
 
-  const [snack, setSnacl] = useState({
+  const [snack, setSnack] = useState({
     name: '',
     fiber: '',
     protein: '',
