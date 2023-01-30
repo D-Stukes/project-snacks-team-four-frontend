@@ -43,7 +43,7 @@ const deleteSnack = () => {
   return (
     <article>
     <h3>
-    {snack.name} {snack.is_healthy ? <span>"heart"</span> : "heart outline"} 
+    {snack.name} {snack.is_healthy ? <span>"♥"</span> : "♡"} 
     </h3>
     {/* <h4>{snack.name}</h4> */}
     <h4>{snack.fiber}</h4>
