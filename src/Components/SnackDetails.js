@@ -10,22 +10,22 @@ function SnackDetails() {
   let navigate = useNavigate();
 
 // Inside SnackDetails function
-const deleteSnack = () => {
+const handleDelete = () => {
   axios
     .delete(`${API}/snacks/${id}`)
     .then(
       () => {
         navigate(`/snacks`);
       },
-      (error) => console.error(error)
+      (error) => console.error(error) //normally for 404 errors when item is not found
     )
-    .catch((c) => console.warn("catch", c));
+    .catch((c) => console.warn("catch", c)); //for 500 error for server erros
 };
 
-  const handleDelete = () => {
-    console.log("button clicked");
-    deleteSnack()
-  };
+  // const handleDelete = () => {
+  //   console.log("button clicked");
+  //   deleteSnack()
+  // };
 
 
  useEffect(() => {
@@ -53,7 +53,7 @@ const deleteSnack = () => {
     
     <div className="showNavigation">
         <div>
-          {" "}
+          {/* {" "} */}
           <Link to={`/snacks`}><button>Back</button></Link>
         </div>
         <div>
