@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 .nav {
   background-color: gray;
   background-image: url("./images/hd-wallpaper-gfba78f985_1280.jpg");
   height: 100%;
   width: 100%;
+=======
+.nav{
+    background-color: rgb(216, 214, 214);
+    /* background-image: url("./images/hd-wallpaper-gfba78f985_1280.jpg"); */
+    height: 100%;
+    width: 100%;
+>>>>>>> Stashed changes
 }
 
 .home {
