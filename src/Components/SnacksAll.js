@@ -10,17 +10,19 @@ function SnacksAll() {
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
-      .then((response) => setSnacks(response.data))
+      .then((response) => {
+        console.log(response.data);
+        setSnacks(response.data);
+      })
       .catch((c) => console.warn("catch", c));
   }, []);
   return (
     <div className="SnacksAll">
-            <p>
-              {snacks.map((snack) => {
-              return <Snack key={snack.id} snack={snack} 
-              />;
-            })}
-            </p>
+      <p>
+        {snacks.map((snack) => {
+          return <Snack key={snack.id} snack={snack} />;
+        })}
+      </p>
     </div>
   );
 }
