@@ -42,7 +42,7 @@ function NewSnackForm() {
   };
   return (
     <div className="newSnack">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}  className="newSnackFormBox">
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -83,13 +83,13 @@ function NewSnackForm() {
           onChange={handleTextChange}
         />
 
-        <label htmlFor="is_healthy">Is Healthy:</label>
+        {/* <label htmlFor="is_healthy">Is Healthy:</label>
         <input
           id="is_healthy"
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={snack.is_healthy}
-        />
+        /> */}
         <br />
         <input
           id="image"
@@ -102,7 +102,8 @@ function NewSnackForm() {
         />
 
         <br />
-        <input type="submit" />
+        <span className="submitButton">
+        <input type="submit"  /></span>
       </form>
     </div>
   );

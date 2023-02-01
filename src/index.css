@@ -109,13 +109,21 @@ font-size: 1.95em;
 }
 
 
+
 .new {
   height: 100%;
   width: 100%;
-  background-image: url("/assets/ellie-ellien-E87UW-n4X1Q-unsplash.jpg");
+  background-image: url("./images/dinner-gb1bbed201_640.jpg");
   background-size: cover;
 }
-
+.newSnackFormBox{
+  margin-left: 40em;
+  color: goldenrod
+}
+.submitButton{
+  color:goldenrod;
+  background-color: black;
+}
 .error {
   height: 80vh;
   width: 100vw;
