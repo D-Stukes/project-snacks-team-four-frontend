@@ -95,27 +95,12 @@ font-size: 1.95em;
   grid-template-rows: 1fr; */
 }
 
-
-.editSnackHdg{
-  text-align: center;
-  color: antiquewhite;
-  font-family: 'Petit Formal Script', cursive;
-}
-.editSnackFormBox{
-  margin-left: 40.5em;
-  color: antiquewhite;
-}
-
-
 .edit {
   height: 80vh;
   width: 100vw;
-  background-image: url("./images/ingredients-g3cb0d86d9_1280.jpg");
+  background-image: url("./images");
   background-size: cover;
 }
-
-
-
 
 .show {
   height: 100%;

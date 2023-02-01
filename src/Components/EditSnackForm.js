@@ -49,7 +49,7 @@ function EditSnackForm() {
   };
   return (
     <div className="editSnack">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}  className="editSnackFormBox">
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -90,13 +90,13 @@ function EditSnackForm() {
           onChange={handleTextChange}
         />
 
-        <label htmlFor="is_healthy">Is Healthy:</label>
+        {/* <label htmlFor="is_healthy">Is Healthy:</label>
         <input
           id="is_healthy"
           type="checkbox"
           onChange={handleCheckboxChange}
           // checked={snack.is_healthy}
-        />
+        /> */}
         <input
           id="image"
           type="text"
