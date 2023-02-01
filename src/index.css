@@ -49,6 +49,7 @@ font-size: 1.95em;
 .outerNavButton1{
   margin-right: 66em;
   font-family: 'Barlow', sans-serif;
+  font-weight: 'bolder';
 }
 /* .outerNavButton2{
   margin-right: 0em;
@@ -116,8 +117,14 @@ font-size: 1.95em;
   background-image: url("./images/dinner-gb1bbed201_640.jpg");
   background-size: cover;
 }
+
+.newformHdg{
+  text-align: center;
+  color: goldenrod;
+  font-family: 'Petit Formal Script', cursive;
+}
 .newSnackFormBox{
-  margin-left: 40em;
+  margin-left: 40.5em;
   color: goldenrod
 }
 .submitButton{

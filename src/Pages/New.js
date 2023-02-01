@@ -4,7 +4,7 @@ import NewSnackForm from "../Components/NewSnackForm";
 function New() {
   return (
     <div className="new">
-      <h2>New</h2>
+      <h4 className="newformHdg">Add A New Snack</h4><br/>
       <NewSnackForm />
     </div>
   );
