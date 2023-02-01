@@ -122,7 +122,8 @@ font-size: 1.95em;
 }
 .submitButton{
   color:goldenrod;
-  background-color: black;
+  background-color: rgb(74, 41, 9);
+  /* background-size: 25px; */
 }
 .error {
   height: 80vh;
