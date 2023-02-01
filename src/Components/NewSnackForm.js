@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -16,16 +16,16 @@ function NewSnackForm() {
         },
         (error) => console.error(error)
       )
-      .catch((c) => console.warn('catch', c));
+      .catch((c) => console.warn("catch", c));
   };
 
   const [snack, setSnack] = useState({
-    name: '',
-    fiber: '',
-    protein: '',
-    added_sugar: '',
-    image: '',
-    is_healthy: false
+    name: "",
+    fiber: "",
+    protein: "",
+    added_sugar: "",
+    image: "",
+    is_healthy: false,
   });
 
   const handleTextChange = (event) => {
@@ -33,7 +33,7 @@ function NewSnackForm() {
   };
 
   const handleCheckboxChange = () => {
-    setSnack({ ...snack, is_health: !snack.is_healthy });
+    setSnack({ ...snack, is_healthy: !snack.is_healthy });
   };
 
   const handleSubmit = (event) => {
@@ -53,7 +53,7 @@ function NewSnackForm() {
           required
         />
 
-       <label htmlFor="fiber">Fiber:</label>
+        <label htmlFor="fiber">Fiber:</label>
         <input
           id="fiber"
           type="text"
@@ -62,8 +62,8 @@ function NewSnackForm() {
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
- 
-       <label htmlFor="protein">Protein:</label>
+
+        <label htmlFor="protein">Protein:</label>
         <input
           id="protein"
           type="text"
@@ -72,7 +72,7 @@ function NewSnackForm() {
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
- 
+
         <label htmlFor="added_sugar">added_sugar:</label>
         <input
           id="added_sugar"
@@ -82,7 +82,7 @@ function NewSnackForm() {
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
-        
+
         <label htmlFor="is_healthy">Is Healthy:</label>
         <input
           id="is_healthy"
@@ -90,11 +90,12 @@ function NewSnackForm() {
           onChange={handleCheckboxChange}
           checked={snack.is_healthy}
         />
-               <input
+        <br />
+        <input
           id="image"
           type="text"
           pattern="http[s]*://.+"
-          required
+          // required ? does it tho?
           value={snack.image}
           placeholder="http://"
           onChange={handleTextChange}

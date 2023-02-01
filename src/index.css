@@ -1,18 +1,20 @@
-<<<<<<< Updated upstream
+/* * {
+  border: 1px solid red;
+} */
+
 .nav {
+  color: red;
+  text-align: center;
   background-color: gray;
   background-image: url("./images/hd-wallpaper-gfba78f985_1280.jpg");
   height: 100%;
   width: 100%;
-=======
-.nav{
-    background-color: rgb(216, 214, 214);
-    /* background-image: url("./images/hd-wallpaper-gfba78f985_1280.jpg"); */
-    height: 100%;
-    width: 100%;
->>>>>>> Stashed changes
 }
-
+.navButton {
+  color: black;
+  background-color: rgba(184, 120, 37, 0.589);
+  margin: 20px;
+}
 .home {
   height: 80vh;
   width: 100vw;
@@ -20,10 +22,12 @@
   background-size: cover;
 }
 .index {
-  height: 80vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: url("./images/brooke-lark-wMzx2nBdeng-unsplash\ 2.jpg");
   background-size: cover;
+  /* grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr; */
 }
 
 .edit {
@@ -34,8 +38,8 @@
 }
 
 .show {
-  height: 80vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: url("./images/ellie-ellien-E87UW-n4X1Q-unsplash.jpg");
   background-size: cover;
 }
@@ -56,4 +60,30 @@
 .foodImg {
   height: 250px;
   width: 250px;
+}
+
+.snack {
+  color: rgb(110, 0, 0);
+  border: 2px solid black;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  background-color: burlywood;
+}
+.snackCards {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.indexSnackList {
+  text-align: center;
+  background-color: rgba(184, 120, 37, 0.589);
+  margin: 20px;
+  margin-top: 0px;
+}
+.SnackDetail {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }

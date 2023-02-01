@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import SnacksAll from "./SnacksAll";
+
+console.log(SnacksAll);
 const API = process.env.REACT_APP_API_URL;
 
-function SnackDetails() {
+function SnackDetails({ snacks }) {
   const [snack, setSnack] = useState({});
   let id = useParams();
 
@@ -12,7 +15,7 @@ function SnackDetails() {
   // Inside SnackDetails function
   const handleDelete = () => {
     axios
-      .delete(`${API}/snacks/${id}`)
+      .delete(`${API}/snacks/${id.index}`)
       .then(
         () => {
           navigate(`/snacks`);
@@ -38,35 +41,55 @@ function SnackDetails() {
         console.warn("catch", c);
       });
   }, [id]);
-  console.log(snack);
+  console.log(snacks);
   console.log(id.index);
 
   return (
-    <article>
-      <h4>{snack.name}</h4>
-      <img className="foodImg" src={snack.image} alt="image not found" />
-      <h3>{snack.is_healthy ? <span>"♥"</span> : "♡"}</h3>
-      {/* <h4>{snack.name}</h4> */}
-      <h4>{snack.fiber}</h4>
-      <h4>{snack.protein}</h4>
-      <h4>{snack.added_sugar}</h4>
+    <article className="SnackDetail">
+      <div>
+        <h4>{snack.name}</h4>
+        <img className="foodImg" src={snack.image} alt="image not found" />
+        <h3>{snack.is_healthy ? <span>❤️</span> : <span>♡</span>}</h3>
+        {/* <h4>{snack.name}</h4> */}
+        <h4>Fiber: {snack.fiber}</h4>
+        <h4>Protein: {snack.protein}</h4>
+        <h4>Added Sugar: {snack.added_sugar}</h4>
 
-      <div className="showNavigation">
-        <div>
-          {/* {" "} */}
-          <Link to={`/snacks`}>
-            <button>Back</button>
-          </Link>
+        <div className="showNavigation">
+          <div>
+            {/* {" "} */}
+            <Link to={`/snacks`}>
+              <button>Back</button>
+            </Link>
+          </div>
+          <div>
+            <Link to={`/snacks/${id.index}/edit`}>
+              {" "}
+              <button>Edit</button>
+            </Link>
+          </div>
+          <div>
+            <button onClick={handleDelete}>Delete</button>
+          </div>
         </div>
-        <div>
-          <Link to={`/snacks/${id}/edit`}>
-            {" "}
-            <button>Edit</button>
-          </Link>
-        </div>
-        <div>
-          <button onClick={handleDelete}>Delete</button>
-        </div>
+      </div>
+
+      <div>
+        {snacks.map((snack) => {
+          return (
+            <tr>
+              <td>{snack.is_healthy ? <span>❤️</span> : <span>♡</span>}</td>
+              <img style={{ height: 25, width: 25 }} src={snack.image}></img>
+              <td>
+                <Link to={`/snacks/${snack.id}`}>{snack.name}</Link>
+                {/* why is clicking on the name of the snack taking me to just the image? */}
+              </td>
+              <td>
+                <Link to={`/snacks/${snack.id}/edit`}>✏️</Link>
+              </td>
+            </tr>
+          );
+        })}
       </div>
     </article>
   );

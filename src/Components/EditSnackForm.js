@@ -1,31 +1,31 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 function EditSnackForm() {
-  let { id } = useParams();
+  let id = useParams();
   let navigate = useNavigate();
 
   const [snack, setSnack] = useState({
-    name: '',
-    fiber: '',
-    protein: '',
-    added_sugar: '',
-    image: '',
-    is_healthy: false
+    name: "",
+    fiber: "",
+    protein: "",
+    added_sugar: "",
+    image: "",
+    is_healthy: false,
   });
 
   const updateSnack = (updatedSnack) => {
     axios
-      .put(`${API}/snacks/${id}`, updatedSnack)
+      .put(`${API}/snacks/${id.index}`, updatedSnack)
       .then(
         () => {
-          navigate(`/snacks/${id}`);
+          navigate(`/snacks/${id.index}`);
         },
         (error) => console.error(error)
       )
-      .catch((c) => console.warn('catch', c));
+      .catch((c) => console.warn("catch", c));
   };
 
   const handleTextChange = (event) => {
@@ -37,15 +37,15 @@ function EditSnackForm() {
   };
 
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then(
+    axios.get(`${API}/snacks/${id.index}`).then(
       (response) => setSnack(response.data),
       (error) => navigate(`/not-found`)
     );
-  }, [id, navigate]);
+  }, [id.index, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateSnack(snack, id);
+    updateSnack(snack, id.index);
   };
   return (
     <div className="editSnack">
@@ -60,7 +60,7 @@ function EditSnackForm() {
           required
         />
 
-       <label htmlFor="fiber">Fiber:</label>
+        <label htmlFor="fiber">Fiber:</label>
         <input
           id="fiber"
           type="text"
@@ -69,8 +69,8 @@ function EditSnackForm() {
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
- 
-       <label htmlFor="protein">Protein:</label>
+
+        <label htmlFor="protein">Protein:</label>
         <input
           id="protein"
           type="text"
@@ -79,7 +79,7 @@ function EditSnackForm() {
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
- 
+
         <label htmlFor="added_sugar">added_sugar:</label>
         <input
           id="added_sugar"
@@ -89,19 +89,19 @@ function EditSnackForm() {
           placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
-        
+
         <label htmlFor="is_healthy">Is Healthy:</label>
         <input
           id="is_healthy"
           type="checkbox"
           onChange={handleCheckboxChange}
-          checked={snack.is_healthy}
+          // checked={snack.is_healthy}
         />
-               <input
+        <input
           id="image"
           type="text"
           pattern="http[s]*://.+"
-          required
+          // required
           value={snack.image}
           placeholder="http://"
           onChange={handleTextChange}
@@ -110,7 +110,7 @@ function EditSnackForm() {
         <br />
         <input type="submit" />
       </form>
-      <Link to={`/snacks/${id}`}>
+      <Link to={`/snacks/${id.index}`}>
         <button>Nevermind!</button>
       </Link>
     </div>

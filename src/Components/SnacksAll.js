@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Snack from "./Snack";
+import Snack from "./Snack"; //this line needed?
+
 //import { Link} from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
@@ -17,8 +18,8 @@ function SnacksAll() {
       .catch((c) => console.warn("catch", c));
   }, []);
   return (
-    <div className="SnacksAll">
-      <p>
+    <div>
+      <p className="snackCards">
         {snacks.map((snack) => {
           return <Snack key={snack.id} snack={snack} />;
         })}
