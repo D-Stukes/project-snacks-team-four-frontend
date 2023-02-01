@@ -16,16 +16,21 @@
 .navButtonHdg, .navButtonHdg2, .navButton {
   color: black;
   background-color: rgba(184, 120, 37, 0.589);
+
   margin: 20px;
   height: 5vh;
   width: 5vh;
  
 }
 .navButtonHdg{
-  color:rgb(49, 9, 76);
-  font-weight:bold;
-  font-size:.7em;
+  /* color:rgb(49, 9, 76); */
+  color:rgb(112, 6, 79);
+  font-weight:300;
+  font-size:.6em;
   margin-bottom: 10vh;
+  background-color:rgba(241, 235, 186, 0.7);
+  font-family: 'Petit Formal Script', cursive;
+  
 }
 
 .indexSnackList{
@@ -55,6 +60,31 @@ font-size: 1.95em;
   background-image: url("./images/breakfast-g797c90361_1280.jpg");
   background-size: cover;
 }
+
+.homeBox{
+  height:35vh;
+  width: 52vw;
+  border: 2.5px solid indigo;
+  margin-left: 21.9em;
+  text-align: center;
+  background-color:rgba(135,206,235,.3)
+
+}
+.welcomeHdg{
+  font-family: 'Petit Formal Script', cursive;
+  font-size: 3em;
+  font-weight: bolder;
+  color:indigo;
+  margin-top: .8em;
+}
+
+.welcomeMsg{
+  font-size: 1.8em;
+  color: indigo;
+  font-weight: bold;
+  font-style:italic;
+}
+
 .index {
   height: 100%;
   width: 100%;

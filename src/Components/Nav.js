@@ -5,7 +5,7 @@ export default function Nav() {
     <nav className="nav">
       <h1  >
         <Link to="/" className="navButtonHdg">
-         SNACKS LOG {" "}
+         Snacks Log{" "}
         </Link>
       </h1>
       
