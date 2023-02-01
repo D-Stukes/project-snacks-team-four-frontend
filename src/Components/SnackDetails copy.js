@@ -45,45 +45,47 @@ function SnackDetails({ snacks }) {
   console.log(id.index);
 
   return (
-    <article className="SnackDetails">
-      <div className="snackShowBox">
-        <h4 className="snackName snackShowBoxHdg">{snack.name}</h4>
+   <article className="SnackDetail">
+      <div>
+        <h4>{snack.name}</h4>
         <img className="foodImg" src={snack.image} alt="image not found" />
         <h3>{snack.is_healthy ? <span>❤️</span> : <span>♡</span>}</h3>
- 
-        <span className="snackSpec" >Fiber: {snack.fiber}  | {"    "}</span>
-        <span className="snackSpec" >Protein: {snack.protein}  | {"    "}</span>
-        <span className="snackSpec" >Added Sugar: {snack.added_sugar}</span><br/>
+        {/* <h 4>{snack.name}</h> */}
+        <span className="snackSpec">Fiber: {snack.fiber}  | {"    "} </span>
+        <span className="snackSpec">Protein: {snack.protein} {"    " }  | {"    "} </span>
+        <span className="snackSpec">Added Sugar: {snack.added_sugar}</span><br/><br/><br/><br/>
 
         <div className="showNavigation">
-        
+          <div>
+            {/* {" "} */}
             <Link to={`/snacks`}>
               <button>Back</button>
             </Link>
-         
-         
-            <Link to={`/snacks/${id.index}/edit`}>
+
+                   <Link to={`/snacks/${id.index}/edit`}>
               {" "}
               <button>Edit</button>
-            </Link>
-      
-            <button onClick={handleDelete}>Delete</button>
-        
+            </Link>   
+             <button onClick={handleDelete}>Delete</button>
+          </div>
+          <div>
+ 
+          </div>
+          <div>
+            
+          </div>
         </div>
       </div>
 
-      <div className="snackLinkBox">
-       <h4 className="snackLinkBoxHdg">View Other Snacks</h4>
+      <div>
         {snacks.map((snack) => {
           return (
-            <tr className="snackLinkData">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>{snack.is_healthy ? <span>❤️</span> : <span className="heart2">♡</span>}</td>
-              <img style={{ height: 25, width: 25 }} src={snack.image}></img>
+            <tr>
+              <td>{snack.is_healthy ? <span className="healthyHeart">❤️</span> : <span className="unhealthyHeart">♡</span>}</td>
+              <img classname="snackImageSideLink"style={{ height: 25, width: 25 }} src={snack.image}></img>
               <td>
-                <Link to={`/snacks/${snack.id}`}>{snack.name}</Link>
+                <Link to={`/snacks/${snack.id}`}  classname="snackNameSideLink" >{snack.name} </Link>
+                {/* why is clicking on the name of the snack taking me to just the image? */}
               </td>
               <td>
                 <Link to={`/snacks/${snack.id}/edit`}>✏️</Link>

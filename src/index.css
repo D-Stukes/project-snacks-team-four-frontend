@@ -104,9 +104,10 @@ font-size: 1.95em;
 .show {
   height: 100%;
   width: 100%;
-  background-image: url("./images/ellie-ellien-E87UW-n4X1Q-unsplash.jpg");
+  background-image: url("./images/cover-g12f1b5082_640.jpg");
   background-size: cover;
 }
+
 
 .new {
   height: 100%;
@@ -148,8 +149,56 @@ font-size: 1.95em;
   margin: 20px;
   margin-top: 0px;
 }
-.SnackDetail {
+.SnackDetails {
   text-align: center;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  height:87vh;
+  width: 70vw;
+}
+
+.snackImageSideLink{
+  height: 1vh;
+  width: 1vh;
+}
+.snackNameSideLink{
+  font-size: 3em;
+  font-weight: bolder;
+}
+.snackSpec{
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.snackShowBoxHdg{
+  color:brown;
+  font-weight: bolder;
+}
+.snackShowBox{
+  margin-top: 3em;
+  margin-left: 10em;
+  margin-right: 10em;
+  background-color: rgba(250,235,215,.8);
+  height:63vh;
+  width: 34vw;
+  border: 2px solid goldenrod;
+}
+
+.snackLinkBoxHdg{
+  color:goldenrod;
+  font-weight: 50;
+}
+.snackLinkBox{
+  margin-top: 3em;
+  background-color: rgba(3, 52, 3, .8);
+  height:63vh;
+  width: 34vw;
+  border: 2px solid black;
+}
+
+/* .snackLinkData{
+  margin-left: 2em;
+} */
+.heart2{
+  color:yellow;
 }
