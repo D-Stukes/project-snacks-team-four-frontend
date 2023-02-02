@@ -80,7 +80,7 @@ function EditSnackForm() {
           onChange={handleTextChange}
         />
 
-        <label htmlFor="added_sugar">added_sugar:</label>
+        <label htmlFor="added_sugar">Added Sugar:</label>
         <input
           id="added_sugar"
           type="text"
@@ -97,22 +97,26 @@ function EditSnackForm() {
           onChange={handleCheckboxChange}
           // checked={snack.is_healthy}
         /> */}
+          <label htmlFor="image">Image URL:</label>
         <input
           id="image"
           type="text"
           pattern="http[s]*://.+"
           // required
           value={snack.image}
-          placeholder="http://"
+          placeholder='Add url, beginning with: "http://"'
           onChange={handleTextChange}
         />
 
         <br />
-        <input type="submit" />
-      </form>
-      <Link to={`/snacks/${id.index}`}>
-        <button>Nevermind!</button>
+        <input 
+        className="editSubmitButton"
+         type="submit" />
+        <Link to={`/snacks/${id.index}`}>
+        <button className="editCancelButton">Cancel</button>
       </Link>
+      </form>
+
     </div>
   );
 }

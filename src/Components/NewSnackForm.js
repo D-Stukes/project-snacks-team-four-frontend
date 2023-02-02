@@ -102,7 +102,7 @@ function NewSnackForm() {
         />
 
         <br />
-        <span className="submitButton">
+        <span className="newSubmitButton">
         <input type="submit"  /></span>
       </form>
     </div>

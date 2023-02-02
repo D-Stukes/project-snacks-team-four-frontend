@@ -4,8 +4,8 @@ function Edit() {
   return (
     <div className="edit">
       <div className="editHdgs">
-      <span className="editSnackHdg">Edit this Snack</span> <br/><br/>
-      <span className="editSnackCancelHdg">(or press Cancel button and return to Snack List)</span>
+      <span className="editSnackHdg">Edit This Snack</span> <br/><br/>
+
       <EditSnackForm />
       </div>
     </div>
