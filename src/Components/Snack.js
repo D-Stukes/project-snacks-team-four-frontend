@@ -23,7 +23,9 @@ function Snack({ snack }) {
               <img
                 style={{ width: "200", height: "200" }}
                 className="foodImg"
-                src={snack.image}
+                src={  
+                  snack.image ? snack.image
+                  : "https://www.tastingtable.com/img/gallery/coffee-brands-ranked-from-worst-to-best/intro-1645231221.webp"}
                 alt="image not found"
               />
             </Link>

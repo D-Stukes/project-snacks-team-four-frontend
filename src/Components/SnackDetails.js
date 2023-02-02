@@ -47,7 +47,10 @@ function SnackDetails({ snacks }) {
     <article className="SnackDetails">
       <div className="snackShowBox">
         <h4 className="snackName snackShowBoxHdg">{snack.name}</h4>
-        <img className="foodImg" src={snack.image} alt="image not found" />
+        <img className="foodImg" 
+        src={   snack.image
+              ? snack.image
+              : "https://www.tastingtable.com/img/gallery/coffee-brands-ranked-from-worst-to-best/intro-1645231221.webp"} alt="image not found" />
         <h3>{snack.is_healthy ? <span>❤️</span> : <span>♡</span>}</h3>
  
         <span className="snackSpec" >Fiber: {snack.fiber}  | {"    "}</span>
@@ -80,7 +83,11 @@ function SnackDetails({ snacks }) {
               <td></td>
               <td></td>
               <td>{snack.is_healthy ? <span>❤️</span> : <span className="heart2">♡</span>}</td>
-              <img style={{ height: 25, width: 25 }} src={snack.image}></img>
+              <img style={{ height: 25, width: 25 }} 
+              src={            
+                snack.image
+              ? snack.image
+              : "https://www.tastingtable.com/img/gallery/coffee-brands-ranked-from-worst-to-best/intro-1645231221.webp"}></img>
               <td>
                 <Link to={`/snacks/${snack.id}`}>{snack.name}</Link>
               </td>

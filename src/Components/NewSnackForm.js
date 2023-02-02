@@ -28,8 +28,15 @@ function NewSnackForm() {
     is_healthy: false,
   });
 
+  const [image, setImage] = useState("")
+
   const handleTextChange = (event) => {
     setSnack({ ...snack, [event.target.id]: event.target.value });
+    console.log("newly set Snack", snack)
+    // if(!event.target.image) {
+    //   // setImage('https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image')
+    //   setImage("https://fastly.picsum.photos/id/63/200/300.jpg?hmac=Zhw62KKdLbsw5yRcx9gVDEQq4kzPwjZUrJAJUIryu6k")
+    // }
   };
 
   const handleCheckboxChange = () => {
