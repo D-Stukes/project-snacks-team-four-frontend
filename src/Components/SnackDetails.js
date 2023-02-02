@@ -82,12 +82,11 @@ function SnackDetails({ snacks }) {
               <td>{snack.is_healthy ? <span>❤️</span> : <span className="heart2">♡</span>}</td>
               <img style={{ height: 25, width: 25 }} src={snack.image}></img>
               <td>
-                {/* <Link to={`/snacks/${snack.id}`}>{snack.name}</Link> */}
-                <Link to={`/snacks/${id}`}>{snack.name}</Link>
+                <Link to={`/snacks/${snack.id}`}>{snack.name}</Link>
               </td>
               <td>
-                {/* <Link to={`/snacks/${snack.id}/edit`}>✏️</Link> */}
-                <Link to={`/snacks/${id}/edit`}>✏️</Link>
+                <Link to={`/snacks/${snack.id}/edit`}>✏️</Link>
+              
               </td>
             </tr>
           );
