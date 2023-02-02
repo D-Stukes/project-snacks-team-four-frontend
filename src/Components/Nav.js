@@ -11,8 +11,7 @@ export default function Nav() {
       
       <button className="outerNavButton1">
       <Link className="navButton" to="/snacks">
-          {" "}
-          Snack List{" "}
+          Snack List 
         </Link>
       </button>
 

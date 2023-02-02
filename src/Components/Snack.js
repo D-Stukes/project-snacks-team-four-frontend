@@ -19,19 +19,22 @@ function Snack({ snack }) {
       <ul>
         {
           <li>
-            <img
-              style={{ width: "200", height: "200" }}
-              className="foodImg"
-              src={snack.image}
-              alt="image not found"
-            />
-            <Link className="snack" to={`/snacks/${snack.id}`}>
+            <Link className="snackPicBoc" to={`/snacks/${snack.id}`}>
+              <img
+                style={{ width: "200", height: "200" }}
+                className="foodImg"
+                src={snack.image}
+                alt="image not found"
+              />
+            </Link>
+            <Link className="snackNameBox" to={`/snacks/${snack.id}`}>
               {snack.name}
             </Link>
-            <div>{snack.is_healthy ? <span>❤️</span> : <span>♡</span>}</div>
-            <div>
-              <Link to={`/snacks/${snack.id}/edit`}>✏️</Link>
-            </div>
+            <span>{snack.is_healthy ? <span className="redHeart">❤️</span> : <span className="blackHeart">♡</span>} </span>
+            <span>{"     "}</span>
+            <span>
+              <Link to={`/snacks/${snack.id}/edit`} className="editPencil">✏️</Link>
+            </span>
           </li>
         }
       </ul>
@@ -40,6 +43,8 @@ function Snack({ snack }) {
 }
 
 export default Snack;
+
+//old heart <span>♡</span>  not visible enough
 
 //streach goal aside for each card
 

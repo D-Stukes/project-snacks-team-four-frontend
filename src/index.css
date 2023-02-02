@@ -32,16 +32,19 @@
 
 .navButton{
   font-size: 1.5em;
+
 }
 
 .outerNavButton1, .outerNavButton2{
   background-color:rgba(241, 235, 186, 0.7) ;
+  /* font-family: 'Barlow', sans-serif; */
+  font-weight: '900';
   
 }
 .outerNavButton1{
   margin-right: 66em;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 'bolder';
+  
+
 }
 /* .outerNavButton2{
   margin-right: 0em;
@@ -73,7 +76,7 @@
 /*****************  HOME PAGE *****************/
 
 .home {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   background-image: url("./images/breakfast-g797c90361_1280.jpg");
   background-size: cover;
@@ -116,22 +119,49 @@
 }
 
 .editSnackFormBox{
-  margin-left: 40.5em;
+  margin-left: 35.5em;
   color: antiquewhite;
 }
 
 .edit {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   background-image: url("./images/ingredients-g3cb0d86d9_1280.jpg");
   background-size: cover;
 }
 
-.editSubmitButton, input[type=submit] {
+input.editSubmitButton{
   color:antiquewhite;
   background-color: rgb(74, 41, 9);
-  /* background-size: 25px; */
 }
+
+input.editSubmitButton:hover {
+  color:rgb(253, 249, 5);
+  background-color: rgb(3, 42, 10);
+}
+
+.editCancelButton,.newCancelButton{
+  color:black;
+  background-color: rgb(241, 241, 25);
+  margin-left: 11.2em;
+}
+
+.editCancelButton:hover, .newCancelButton:hover {
+  background-color: maroon;
+  color:white;
+}
+.editPencil{
+  margin-left: 2em;
+  font-size: 1.3em;
+}
+
+.editSnackFormBox, input[type=text]{
+width: 24em;
+}
+
+
+
+/*****************  NEW SHOW Page *****************/
 
 .show {
   height: 100%;
@@ -144,28 +174,39 @@
 /*****************  NEW SNACK FORM *****************/
 
 .new {
-  height: 100%;
+  height: 90vh;
   width: 100%;
   background-image: url("./images/dinner-gb1bbed201_640.jpg");
   background-size: cover;
 }
 
 .newformHdg{
+  margin-top: 2em;
   text-align: center;
   color: goldenrod;
   font-family: 'Petit Formal Script', cursive;
 }
 
 .newSnackFormBox{
-  margin-left: 40.5em;
-  color: goldenrod
+  margin-left: 35.39em;
+  color: goldenrod;
+  background-color: rgba(39, 17, 3, .5);
+
 }
 
-.newSubmitButton, input[type=submit] {
+
+
+input.newSubmitButton {
   color:antiquewhite;
   font-size: .9em;
-  background-color: rgb(74, 41, 9);
+  background-color: rgba(74, 41, 9, .2);
 }
+input.newSubmitButton:hover {
+  color:rgb(253, 249, 5);
+  background-color: rgb(3, 42, 10);
+}
+
+
 
 /***************** ERROR PAGE *****************/
 
@@ -182,17 +223,22 @@
   height: 35vh;
   width: 25vw;
   border: 2.5px solid black;
+  margin-left: -1em;
 }
 
-.snack {
+.snackNameBox {
   color: rgb(110, 0, 0);
   font-size: 1.55em;
   margin: 10px;
   display: grid;
   grid-template-columns: auto;
   text-align: center;
-  background-color: burlywood;
-  border: 3px solid darkgoldenrod;
+  /* background-color: burlywood; */
+  /* border: 3px solid darkgoldenrod; */
+  justify-self: center;
+  margin-left: .8em;
+  margin-top:  -0.2em;
+  padding-bottom: -.2em;
 }
 
 .snackCards {
@@ -259,4 +305,13 @@
 
 .heart2{
   color:yellow;
+}
+.redHeart, .blackHeart{
+  font-size: 1.5em;
+}
+.blackHeart{
+  background-color: rgba(245, 249, 21, 0.3);
+  color: rgb(7, 3, 3);
+  font-weight:900;
+  border-radius: 50%;
 }
