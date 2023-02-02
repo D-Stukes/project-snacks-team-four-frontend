@@ -4,7 +4,7 @@ import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 function EditSnackForm() {
-  let { id } = useParams();
+  let id = useParams();
   let navigate = useNavigate();
 
   const [snack, setSnack] = useState({
@@ -18,11 +18,10 @@ function EditSnackForm() {
 
   const updateSnack = (updatedSnack) => {
     axios
-      .put(`${API}/snacks/${id}`, updatedSnack)
+      .put(`${API}/snacks/${id.index}`, updatedSnack)
       .then(
         () => {
-          console.log("this is the id: ", {id})
-          navigate(`/snacks/${id}`);
+          navigate(`/snacks/${id.index}`);
         },
         (error) => console.error(error)
       )
@@ -33,19 +32,21 @@ function EditSnackForm() {
     setSnack({ ...snack, [event.target.id]: event.target.value });
   };
 
+  const handleCheckboxChange = () => {
+    setSnack({ ...snack, is_favorite: !snack.is_favorite });
+  };
 
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then(
+    axios.get(`${API}/snacks/${id.index}`).then(
       (response) => setSnack(response.data),
       (error) => navigate(`/not-found`)
     );
-  }, [id, navigate]);
+  }, [id.index, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateSnack(snack, id);
+    updateSnack(snack, id.index);
   };
-
   return (
     <div className="editSnack">
       <form onSubmit={handleSubmit}  className="editSnackFormBox">
@@ -55,7 +56,7 @@ function EditSnackForm() {
           value={snack.name}
           type="text"
           onChange={handleTextChange}
-          placeholder="Please enter the snack name (or type)"
+          placeholder="Snack Type"
           required
         />
 
@@ -65,7 +66,7 @@ function EditSnackForm() {
           type="text"
           name="fiber"
           value={snack.fiber}
-          placeholder="Please enter amount of fiber in grams"
+          placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
 
@@ -75,7 +76,7 @@ function EditSnackForm() {
           type="text"
           name="protein"
           value={snack.protein}
-          placeholder="Please enter amount of protein in grams"
+          placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
 
@@ -85,16 +86,23 @@ function EditSnackForm() {
           type="text"
           name="added_sugar"
           value={snack.added_sugar}
-          placeholder="Please enter amount of sugar in grams"
+          placeholder="educational, inspirational, ..."
           onChange={handleTextChange}
         />
 
- 
-        <label htmlFor="image">Image URL:</label>
+        {/* <label htmlFor="is_healthy">Is Healthy:</label>
+        <input
+          id="is_healthy"
+          type="checkbox"
+          onChange={handleCheckboxChange}
+          // checked={snack.is_healthy}
+        /> */}
+          <label htmlFor="image">Image URL:</label>
         <input
           id="image"
           type="text"
           pattern="http[s]*://.+"
+          // required
           value={snack.image}
           placeholder='Add url, beginning with: "http://"'
           onChange={handleTextChange}
@@ -104,10 +112,11 @@ function EditSnackForm() {
         <input 
         className="editSubmitButton"
          type="submit" />
-        <Link to={`/snacks/`}>
+        <Link to={`/snacks/${id.index}`}>
         <button className="editCancelButton">Cancel</button>
       </Link>
       </form>
+
     </div>
   );
 }

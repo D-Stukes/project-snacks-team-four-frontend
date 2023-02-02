@@ -24,8 +24,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/snacks" element={<Index />} />
             <Route path="/snacks/new" element={<New />} />
-            <Route path="/snacks/:index" element={<Show />} />
-            <Route path="/snacks/:index/edit" element={<Edit />} />
+            <Route path="/snacks/:id" element={<Show />} />
+            <Route path="/snacks/:id/edit" element={<Edit />} />
             <Route path="/error" element={<Error />} />
           </Routes>
         </main>

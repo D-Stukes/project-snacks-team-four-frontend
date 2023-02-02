@@ -8,14 +8,14 @@ const API = process.env.REACT_APP_API_URL;
 
 function SnackDetails({ snacks }) {
   const [snack, setSnack] = useState({});
-  let id = useParams();
+  let { id } = useParams();
 
   let navigate = useNavigate();
 
   // Inside SnackDetails function
   const handleDelete = () => {
     axios
-      .delete(`${API}/snacks/${id.index}`)
+      .delete(`${API}/snacks/${id}`)
       .then(
         () => {
           navigate(`/snacks`);
@@ -32,8 +32,7 @@ function SnackDetails({ snacks }) {
 
   useEffect(() => {
     axios
-      .get(`${API}/snacks/${id.index}`)
-      // added dot index to see the id value
+      .get(`${API}/snacks/${id}`)
       .then((response) => {
         setSnack(response.data);
       })
@@ -41,8 +40,8 @@ function SnackDetails({ snacks }) {
         console.warn("catch", c);
       });
   }, [id]);
-  console.log(snacks);
-  console.log(id.index);
+  // console.log(snacks);
+  // console.log(id);
 
   return (
     <article className="SnackDetails">
@@ -62,7 +61,7 @@ function SnackDetails({ snacks }) {
             </Link>
          
          
-            <Link to={`/snacks/${id.index}/edit`}>
+            <Link to={`/snacks/${id}/edit`}>
               {" "}
               <button>Edit</button>
             </Link>
@@ -83,10 +82,12 @@ function SnackDetails({ snacks }) {
               <td>{snack.is_healthy ? <span>❤️</span> : <span className="heart2">♡</span>}</td>
               <img style={{ height: 25, width: 25 }} src={snack.image}></img>
               <td>
-                <Link to={`/snacks/${snack.id}`}>{snack.name}</Link>
+                {/* <Link to={`/snacks/${snack.id}`}>{snack.name}</Link> */}
+                <Link to={`/snacks/${id}`}>{snack.name}</Link>
               </td>
               <td>
-                <Link to={`/snacks/${snack.id}/edit`}>✏️</Link>
+                {/* <Link to={`/snacks/${snack.id}/edit`}>✏️</Link> */}
+                <Link to={`/snacks/${id}/edit`}>✏️</Link>
               </td>
             </tr>
           );

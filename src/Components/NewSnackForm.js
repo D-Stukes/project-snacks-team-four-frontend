@@ -49,7 +49,7 @@ function NewSnackForm() {
               value={snack.name}
               type="text"
               onChange={handleTextChange}
-              placeholder="Snack Type"
+              placeholder="Please enter the snack name or type"
               required
             />
 
@@ -59,7 +59,7 @@ function NewSnackForm() {
               type="text"
               name="fiber"
               value={snack.fiber}
-              placeholder="educational, inspirational, ..."
+              placeholder="Please enter amount of fiber in grams"
               onChange={handleTextChange}
             />
 
@@ -69,7 +69,7 @@ function NewSnackForm() {
               type="text"
               name="protein"
               value={snack.protein}
-              placeholder="educational, inspirational, ..."
+              placeholder="Please enter amount of protein in grams"
               onChange={handleTextChange}
             />
 
@@ -79,7 +79,7 @@ function NewSnackForm() {
               type="text"
               name="added_sugar"
               value={snack.added_sugar}
-              placeholder="educational, inspirational, ..."
+              placeholder="Please enter amount of sugar in grams"
               onChange={handleTextChange}
             />
 
