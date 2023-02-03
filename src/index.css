@@ -209,12 +209,23 @@ input.newSubmitButton:hover {
 
 
 /***************** ERROR PAGE *****************/
-
-.error {
-  height: 80vh;
+.errorBox {
+  height: 150vh;
   width: 100vw;
+ background-color: rgb(4, 47, 7);
+ z-index: 55
+}
+.errorPic {
+  height: 68vh;
+  width: 45vw;
   background-image: url("./images/ai-generated-gad8540c7a_1280.png");
   background-size: cover;
+  margin-left: 27em;
+  z-index: 5;
+}
+.errorHdg{
+  color:rgb(235, 235, 172);
+  text-align: center;
 }
 
 /*****************  SNACK ITEMS, SNACK CARDS *****************/
@@ -294,7 +305,7 @@ input.newSubmitButton:hover {
 .snackLinkBox{
   margin-top: 3em;
   background-color: rgba(3, 52, 3, .8);
-  height:63vh;
+  /* height:63vh; */
   width: 34vw;
   border: 2px solid black;
 }

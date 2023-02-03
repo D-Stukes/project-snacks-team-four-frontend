@@ -35,11 +35,21 @@ function EditSnackForm() {
 
 
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then(
-      (response) => setSnack(response.data),
-      (error) => navigate(`/not-found`)
-    );
-  }, [id, navigate]);
+    axios
+    .get(`${API}/snacks/${id}`)
+    .then((response) => {
+      setSnack(response.data);
+    })
+    .catch((c) => {navigate("/error");
+    });
+}, [id]);
+
+
+//   axios.get(`${API}/snacks/${id}`)
+//   .then((response) => setSnack(response.data))
+//   .catch((c) => navigate("/error")
+// )
+// }, [id, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -36,8 +36,7 @@ function SnackDetails({ snacks }) {
       .then((response) => {
         setSnack(response.data);
       })
-      .catch((c) => {
-        console.warn("catch", c);
+      .catch((c) => {navigate("/error");
       });
   }, [id]);
   // console.log(snacks);
