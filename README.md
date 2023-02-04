@@ -2,11 +2,22 @@
 
 ## Snack-a-log
 
-## Link to deployed Frontend (this app)
-### https://effulgent-moonbeam-841b50.netlify.app/
+# LINKS TO GITHUB REPOSITORIES AND DEPLOYMENTS
 
-## Link to Deployed Backend: 
-### https://snacks-deploy-back.onrender.com
+## GITHUB REPOS
+
+### GITHUB FrontEnd:
+#### https://github.com/D-Stukes/project-snacks-team-four-frontend
+
+###  GITHUB BackEnd:
+#### https://github.com/beckyboop21/project-snack-a-log-backend
+
+## Deployments
+### Deployed Frontend:
+#### https://effulgent-moonbeam-841b50.netlify.app/
+
+### Deployed Backend: 
+#### https://snacks-deploy-back.onrender.com
 
 
 
@@ -134,9 +145,22 @@ Use the resources below to deploy your application.
 1. [Snack-A-Log Video-Demo](https://drive.google.com/file/d/1aVnfu7ANdUPbfJhtSb45G2r0JSGtSI2t/view?usp=sharing)
 1. [Back-end Instructions](https://github.com/9-1-pursuit/project-snack-a-log-backend)
 
+(Repeated here in case it was missed at the top)
+# LINKS TO GITHUB REPOSITORIES AND DEPLOYMENTS
 
-## Link to deployed Frontend (this app)
-### https://effulgent-moonbeam-841b50.netlify.app/
+## GITHUB REPOS
 
-## Link to Deployed Backend: 
-### https://snacks-deploy-back.onrender.com
+### GITHUB FrontEnd:
+#### https://github.com/D-Stukes/project-snacks-team-four-frontend
+
+###  GITHUB BackEnd:
+#### https://github.com/beckyboop21/project-snack-a-log-backend
+
+## Deployments
+### Deployed Frontend:
+#### https://effulgent-moonbeam-841b50.netlify.app/
+
+### Deployed Backend: 
+#### https://snacks-deploy-back.onrender.com
+
+
