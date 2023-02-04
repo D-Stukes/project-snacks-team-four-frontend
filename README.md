@@ -2,6 +2,14 @@
 
 ## Snack-a-log
 
+## Link to deployed Frontend (this app)
+### https://effulgent-moonbeam-841b50.netlify.app/
+
+## Link to Deployed Backend: 
+### https://snacks-deploy-back.onrender.com
+
+
+
 Create an app that allows users to log their favorite snacks. Add functionality that will enable users to see whether or not their snack is healthy based on a simple algorithm.
 
 For this project, there are 45 features, points, functionalities to build. You are required to successfully reach a minimum of 32 points to pass this project.
@@ -126,5 +134,9 @@ Use the resources below to deploy your application.
 1. [Snack-A-Log Video-Demo](https://drive.google.com/file/d/1aVnfu7ANdUPbfJhtSb45G2r0JSGtSI2t/view?usp=sharing)
 1. [Back-end Instructions](https://github.com/9-1-pursuit/project-snack-a-log-backend)
 
-##Link to Deployed Backend: 
- https://snacks-deploy-back.onrender.com/snacks
+
+## Link to deployed Frontend (this app)
+### https://effulgent-moonbeam-841b50.netlify.app/
+
+## Link to Deployed Backend: 
+### https://snacks-deploy-back.onrender.com
